@@ -1,0 +1,15 @@
+@import "../custom";
+
+nav.navbar {
+    .navbar-brand {
+        color: $secondaryColor;
+    }
+    .navbar-nav {
+        .nav-link {
+            font-size: 1.5em;
+            &.active {
+                color: $primaryColor;
+            }
+        }
+    }
+}

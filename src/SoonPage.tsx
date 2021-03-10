@@ -1,6 +1,6 @@
 import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import "./common/variables.scss";
+import "./variables.scss";
 
 const SoonPage = () => {
     return (

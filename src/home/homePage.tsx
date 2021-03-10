@@ -1,11 +1,11 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const HomePage = () => {
     return (
-        <div>
-            <img src="me.jpg" />
+        <Container>
             <div>Hi! This is Tonya CPA Services website</div>
-        </div>
+        </Container>
     );
 };
 

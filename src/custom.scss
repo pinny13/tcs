@@ -1,0 +1,12 @@
+@import "variables";
+
+// Overrides
+$theme-colors: (
+    "primary": $primaryColor,
+    "secondary": $secondaryColor,
+);
+
+// $navbar-nav-link-padding-x: 1rem;
+$navbar-brand-font-size: 1.5rem;
+
+@import "~bootstrap/scss/bootstrap";

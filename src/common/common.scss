@@ -1,0 +1,10 @@
+@import "../custom";
+
+.page {
+    .img {
+        background-image: url(../img/page-bg.jpg);
+        background-size: 100%;
+        height: 200px;
+        opacity: 50%;
+    }
+}

@@ -1,38 +1,26 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import "./navBar.scss";
+import { useLocation } from "react-router-dom";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import "./navigation.scss";
 
 const NavBar = () => {
+    const location = useLocation();
     return (
-        <nav id="nav-bar">
-            <ul>
-                <li>
-                    <NavLink to="/" activeClassName="selected" exact>
-                        Home
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/services" activeClassName="selected">
-                        Services
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/about" activeClassName="selected">
-                        About
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/resources" activeClassName="selected">
-                        Resources
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/contact" activeClassName="selected">
-                        Contact
-                    </NavLink>
-                </li>
-            </ul>
-        </nav>
+        <Navbar expand="md">
+            <Container>
+                <Navbar.Brand href="/">Tonya CPA Services</Navbar.Brand>
+                <Navbar.Toggle />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav activeKey={location.pathname} className="justify-content-center m-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/services">Services</Nav.Link>
+                        <Nav.Link href="/about">About</Nav.Link>
+                        <Nav.Link href="/resources">Resources</Nav.Link>
+                        <Nav.Link href="/contact">Contact</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 };
 
