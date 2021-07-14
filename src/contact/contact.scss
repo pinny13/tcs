@@ -1,0 +1,24 @@
+@import "../custom";
+
+.contact-page {
+    .contact-page-content {
+        margin: 1em 0;
+        width: 66%;
+    }
+
+    iframe {
+        border: 0;
+    }
+
+    h4:nth-of-type(2n) {
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+    .contact-page {
+        .contact-page-content {
+            width: 90%;
+        }
+    }
+}

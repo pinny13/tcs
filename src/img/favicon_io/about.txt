@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Public Sans
+- Font Author: Copyright (c) 2015, Pablo Impallari, Rodrigo Fuenzalida (Modified by Dan O. Williams and USWDS) (https://github.com/uswds/public-sans)
+- Font Source: http://fonts.gstatic.com/s/publicsans/v5/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymuFpm5ww0pX189fg.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)

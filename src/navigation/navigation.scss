@@ -1,8 +1,75 @@
 @import "../custom";
 
+@mixin animation {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transform-origin: bottom;
+    animation-timing-function: linear;
+    animation-name: bounce;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    33% {
+        transform: translateY(-3px);
+    }
+    66% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 nav.navbar {
+    background-color: $white;
     .navbar-brand {
         color: $secondaryColor;
+        &:hover {
+            color: $secondaryColor;
+
+            span.logo-t {
+                @include animation();
+            }
+
+            span.logo-s {
+                @include animation();
+                animation-delay: 100ms;
+            }
+
+            span.logo-k {
+                @include animation();
+                animation-delay: 200ms;
+            }
+        }
+
+        span.logo {
+            position: relative;
+            color: $primaryColor;
+            display: inline-block;
+            font-size: 2em;
+            padding-right: 10px;
+
+            span.logo-t,
+            span.logo-s,
+            span.logo-k {
+                display: inline-block;
+                position: relative;
+            }
+
+            span.logo-t,
+            span.logo-k {
+                top: 2px;
+            }
+        }
+
+        span.name {
+            display:inline-block;
+            position: relative;
+            top: -7px;
+        }
     }
     .navbar-nav {
         .nav-link {
@@ -10,6 +77,23 @@ nav.navbar {
             &.active {
                 color: $primaryColor;
             }
+        }
+    }
+}
+
+nav.navbar.footer {
+    background-color: $green-4;
+    .navbar-text,
+    a {
+        color: $white;
+
+        &:hover {
+            color: $white;
+        }
+    }
+    .linkedin {
+        img {
+            height: $nav-link-height;
         }
     }
 }

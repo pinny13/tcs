@@ -1,50 +1,42 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { NavBar, Footer } from "./navigation";
-import { Loader } from "./common";
+import { Loader, Urls } from "./common";
 import HomePage from "./home";
 import ServicesPage from "./services";
 import AboutPage from "./about";
 import ResourcesPage from "./resources";
 import ContactPage from "./contact";
 import { Error404 } from "./common";
+import SoonPage from "./SoonPage";
 
 import "./App.scss";
 
-/*
-const HomePage = lazy(() => import("./home"));
-const ServicesPage = lazy(() => import("./services"));
-const AboutPage = lazy(() => import("./about"));
-const ResourcesPage = lazy(() => import("./resources"));
-const ContactPage = lazy(() => import("./contact"));
-const Error404 = lazy(() => import("./common/error404Page"));
-*/
-const SoonPage = lazy(() => import("./SoonPage"));
-
 /**
  * TODO:
- * - favicon.ico
  * - Error boundary
- * - footer
+ * - Error pages
+ * - gradual image load (home/other pages)
+ * - 
  */
 
 function App() {
     return (
         <Router>
-            {/* <NavBar /> */}
+            <NavBar />
             <Suspense fallback={<Loader />}>
                 <Switch>
-                    <Route component={SoonPage} />
-                    <Route exact path="/" component={HomePage} />
-                    <Route path="/services" component={ServicesPage} />
-                    <Route path="/about" component={AboutPage} />
-                    <Route path="/resources" component={ResourcesPage} />
-                    <Route path="/contact" component={ContactPage} />
+                    {/* <Route component={SoonPage} /> */}
+                    <Route exact path={Urls.Home} component={HomePage} />
+                    <Route path={Urls.Services} component={ServicesPage} />
+                    <Route path={Urls.About} component={AboutPage} />
+                    <Route path={Urls.Resources} component={ResourcesPage} />
+                    <Route path={Urls.Contact} component={ContactPage} />
                     <Route component={Error404} />
                 </Switch>
             </Suspense>
-            {/* <Footer /> */}
+            <Footer />
         </Router>
     );
 }

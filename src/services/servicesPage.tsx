@@ -1,17 +1,55 @@
-import React from "react";
-import Page from "../common/page";
+import { Container, Row, Col } from "react-bootstrap";
+import { ListCard, ListCardItem, ListCardItemType, Page } from "../common";
+
+const getListItem = (text: string): ListCardItem => ({ type: ListCardItemType.Text, text });
 
 const ServicesPage = () => {
     return (
         <Page>
-            <h3>This is services page</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
+            <Container className="services-page">
+                <Row lg={3} xs={1}>
+                    <Col className="d-flex justify-content-center">
+                        <ListCard
+                            title="Tax services"
+                            img="services1.jpg"
+                            items={[
+                                getListItem("Tax return preparation and compliance"),
+                                getListItem("Tax and financial planning"),
+                                getListItem("Assistance with IRS letters"),
+                                getListItem("State and local taxes"),
+                                getListItem("International tax compliance"),
+                                getListItem("Tax credits"),
+                            ]}
+                        />
+                    </Col>
+                    <Col className="d-flex justify-content-center">
+                        <ListCard
+                            title="Accounting"
+                            img="services2.jpg"
+                            items={[
+                                getListItem("Financial reports"),
+                                getListItem("Bank reconciliation"),
+                                getListItem("QuickBooks assistance"),
+                                getListItem("Budget forecasting"),
+                                getListItem("Maintenance of fixed assets and depreciation schedules"),
+                            ]}
+                        />
+                    </Col>
+                    <Col className="d-flex justify-content-center">
+                        <ListCard
+                            title="Small business"
+                            img="services4.jpg"
+                            items={[
+                                getListItem("New Business Formation"),
+                                getListItem("General ledger analysis"),
+                                getListItem("Acquisitions and sales"),
+                                getListItem("Special transactions consulting"),
+                                getListItem("Ownership transtion"),
+                            ]}
+                        />
+                    </Col>
+                </Row>
+            </Container>
         </Page>
     );
 };

@@ -10,3 +10,11 @@ $theme-colors: (
 $navbar-brand-font-size: 1.5rem;
 
 @import "~bootstrap/scss/bootstrap";
+
+a.btn.btn-primary {
+    color: $body-color;
+
+    &:hover {
+        color: $white;
+    }
+}

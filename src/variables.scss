@@ -1,2 +1,21 @@
-$primaryColor: #8FC31F;
-$secondaryColor: #2AABE4;
+$green-1: #5f8115;
+$green-2: #6f9718;
+$green-3: #7fad1c;
+$green-4: #8fc31f;
+$green-5: #9fd922;
+$green-6: #a9df36;
+$green-7: #b3e34c;
+
+$blue-1: #167eac;
+$blue-2: #198ec2;
+$blue-3: #1c9fd9;
+$blue-4: #2aabe4;
+$blue-5: #41b4e7;
+$blue-6: #57bdea;
+$blue-7: #6ec6ed;
+
+$primaryColor: $green-4;
+$secondaryColor: $blue-4;
+
+$bg-image-opacity: 40%;
+$navbar-height: 4rem;

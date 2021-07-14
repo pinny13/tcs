@@ -1,0 +1,33 @@
+@import "../custom";
+
+.about-page {
+    .about-page-content {
+        margin: 1em 0;
+        width: 66%;
+
+        h5 {
+            font-weight: lighter;
+        }
+
+        h6 {
+            font-style: italic;
+            margin-bottom: 2em;
+        }
+    }
+    img {
+        float: left;
+        padding: 0 1em;
+    }
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+    .about-page {
+        .about-poage-content {
+            width: 90%;
+
+            h2 {
+                font-size: $h3-font-size;
+            }
+        }
+    }
+}

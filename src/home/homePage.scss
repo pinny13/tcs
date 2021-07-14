@@ -1,8 +1,124 @@
-@media screen (max-with: 980px) {
-    // For different screen size - different img source (sameimage different sizes)
+@import "../custom";
+
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+    .home-page {
+        .home-page-container {
+            .home-page-content {
+                .jumbotron {
+                    padding-top: 0 !important;
+
+                    .text1, .text2, .text3 {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
-img {
-    max-width: 100%;
-    display: block;
+@mixin animation($animationName, $delay) {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-name: $animationName;
+    animation-delay: $delay;
+}
+
+@keyframes slideRight {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 80%;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: -80%;
+    }
+}
+
+.home-page {
+    .home-page-container {
+        position: relative;
+        top: $navbar-height;
+        height: calc(100vh - 56px);
+        overflow: visible;
+
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 100;
+            background-image: url(../img/page-bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: $bg-image-opacity;
+            width: 100vw;
+            height: 100%;
+            z-index: 100;
+        }
+
+        .home-page-content {
+            position: relative;
+            padding: 0;
+            z-index: 200;
+
+            .jumbotron {
+                position: relative;
+                padding-top: 3em;
+                z-index: 300;
+                opacity: 60%;
+                background: $black;
+
+                h1,
+                h2 {
+                    padding: 0.5em 0;
+                    color: $gray-100;
+                    z-index: 400;
+
+                    background-image: linear-gradient(90deg, $black 0%, $black 50%, $blue-1 50%, $blue-1 100%);
+                    background-size: 200%;
+                    transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63), color 0.2s linear;
+                    transition-delay: 0s, 0.15s;
+                    
+                }
+                h1 {
+                    font-size: $h1-font-size * 1.1;
+                }
+
+                h2 {
+                    font-size: $h2-font-size * 1.1;
+                }
+
+                .text1 {
+                    background-position: 80%;
+                    @include animation(slideRight, 100ms);
+                }
+                .text2 {
+                    background-position: -95%;
+                    @include animation(slideLeft, 300ms);
+                }
+                .text3 {
+                    background-position: 90%;
+                    @include animation(slideRight, 600ms);
+                }
+            }
+
+            .row {
+                padding-top: 2em;
+
+                a.btn {
+                    margin-bottom: 1em;
+                }
+            }
+
+            .spacer {
+                height: 56px;
+            }
+        }
+    }
 }
