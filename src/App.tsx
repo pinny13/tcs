@@ -18,7 +18,7 @@ import "./App.scss";
  * - Error boundary
  * - Error pages
  * - gradual image load (home/other pages)
- * - 
+ * - In Services, need to put &reg next to "QuickBooks" 
  */
 
 function App() {
