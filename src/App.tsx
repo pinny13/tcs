@@ -8,8 +8,7 @@ import ServicesPage from "./services";
 import AboutPage from "./about";
 import ResourcesPage from "./resources";
 import ContactPage from "./contact";
-import { Error404 } from "./common";
-import SoonPage from "./SoonPage";
+import { Error404 } from "./errors";
 
 import "./App.scss";
 
@@ -18,7 +17,6 @@ import "./App.scss";
  * - Error boundary
  * - Error pages
  * - gradual image load (home/other pages)
- * - In Services, need to put &reg next to "QuickBooks" 
  */
 
 function App() {

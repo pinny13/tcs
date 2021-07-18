@@ -51,9 +51,7 @@ const ListCard = (props: ListCardProps) => {
                                 );
                             default:
                                 return (
-                                    <li key={index} className="text">
-                                        {item.text}
-                                    </li>
+                                    <li key={index} className="text" dangerouslySetInnerHTML={{ __html: item.text }} />
                                 );
                         }
                     })}

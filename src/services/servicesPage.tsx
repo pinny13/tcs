@@ -29,7 +29,7 @@ const ServicesPage = () => {
                             items={[
                                 getListItem("Financial reports"),
                                 getListItem("Bank reconciliation"),
-                                getListItem("QuickBooks assistance"),
+                                getListItem("QuickBooks&reg; assistance"),
                                 getListItem("Budget forecasting"),
                                 getListItem("Maintenance of fixed assets and depreciation schedules"),
                             ]}
