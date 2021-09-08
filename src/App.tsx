@@ -9,6 +9,7 @@ import AboutPage from "./about";
 import ResourcesPage from "./resources";
 import ContactPage from "./contact";
 import { Error404 } from "./errors";
+import SoonPage from "./SoonPage";
 
 import "./App.scss";
 
@@ -16,16 +17,17 @@ import "./App.scss";
  * TODO:
  * - Error boundary
  * - Error pages
+ * - Google analytics
  * - gradual image load (home/other pages)
  */
 
 function App() {
     return (
         <Router>
-            <NavBar />
+            {/* <NavBar /> */}
             <Suspense fallback={<Loader />}>
                 <Switch>
-                    {/* <Route component={SoonPage} /> */}
+                    <Route component={SoonPage} />
                     <Route exact path={Urls.Home} component={HomePage} />
                     <Route path={Urls.Services} component={ServicesPage} />
                     <Route path={Urls.About} component={AboutPage} />

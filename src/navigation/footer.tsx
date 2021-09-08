@@ -11,7 +11,7 @@ const Footer = () => {
                 async
                 defer></script>
             <Container>
-                <Navbar.Text>&copy; Copyright {new Date().getFullYear()} Tonya CPA Services</Navbar.Text>
+                <Navbar.Text>&copy; Copyright {new Date().getFullYear()} {/*Tonya CPA Services*/}</Navbar.Text>
                 {/* 
                 <a
                     href="https://linkedin.com/in/tonya-kheyfets-cpa-60a76454"
